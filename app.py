@@ -48,6 +48,14 @@ if uploaded_file is not None:
     prediction = model.predict(img_array)
     pred_label = labels[np.argmax(prediction)]
     confidence = np.max(prediction) * 100
+
+    # Menampilkan hasil prediksi dengan ambang batas keyakinan
+    threshold = 50  # misalnya 50%
+    if confidence >= threshold:
+        st.write(f"Prediksi: **{pred_label}**")
+        st.write(f"Probabilitas Keyakinan: **{confidence:.2f}%**")
+    else:
+        st.write("Gambar tidak dikenali sebagai batik")
     
     # Menampilkan hasil prediksi
     st.write(f"Prediksi: **{pred_label}**")

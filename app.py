@@ -5,7 +5,7 @@ import numpy as np
 from PIL import Image
 
 # Memuat model yang sudah dilatih
-model = load_model('D:/dokumen/PI/batikdarma/BatikDetection.h5')
+model = load_model('batikdarma/BatikDetection.h5')
 
 # Mendefinisikan label berdasarkan kelas yang digunakan saat pelatihan
 labels = ["Batik Betawi", "Batik Kawung", "Batik Megamendung", "Batik Parang", "Batik Sekar Jagad"]

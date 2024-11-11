@@ -54,9 +54,9 @@ if uploaded_file is not None:
     if confidence >= threshold:
         st.write(f"Prediksi: **{pred_label}**")
         st.write(f"Probabilitas Keyakinan: **{confidence:.2f}%**")
+
+        # Menampilkan deskripsi batik yang diklasifikasikan
+        st.write("Deskripsi Batik:")
+        st.write(batik_descriptions.get(pred_label, ""))
     else:
         st.write("Gambar tidak dikenali sebagai batik")
-
-    # Menampilkan deskripsi batik yang diklasifikasikan
-    st.write("### **Deskripsi Batik:**")
-    st.write(batik_descriptions.get(pred_label, "**Deskripsi tidak tersedia.**"))

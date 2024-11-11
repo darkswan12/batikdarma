@@ -57,6 +57,6 @@ if uploaded_file is not None:
 
         # Menampilkan deskripsi batik yang diklasifikasikan
         st.write("Deskripsi Batik:")
-        st.write(batik_descriptions.get(pred_label, ""))
+        st.write(batik_descriptions.get(pred_label, "Deskripsi tidak tersedia"))
     else:
         st.write("Gambar tidak dikenali sebagai batik")

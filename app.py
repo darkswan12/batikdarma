@@ -56,10 +56,6 @@ if uploaded_file is not None:
         st.write(f"Probabilitas Keyakinan: **{confidence:.2f}%**")
     else:
         st.write("Gambar tidak dikenali sebagai batik")
-    
-    # Menampilkan hasil prediksi
-    st.write(f"Prediksi: **{pred_label}**")
-    st.write(f"Probabilitas Keyakinan: **{confidence:.2f}%**")
 
     # Menampilkan deskripsi batik yang diklasifikasikan
     st.write("### **Deskripsi Batik:**")

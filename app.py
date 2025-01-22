@@ -24,7 +24,7 @@ st.title("Aplikasi Klasifikasi Batik")
 
 # Menambahkan deskripsi di bawah judul
 st.write("Aplikasi ini dapat mendeteksi jenis batik berikut: Betawi, Kawung, Megamendung, Parang, dan Sekar Jagad."
-         "Silakan unggah gambar batik untuk mengetahui jenisnya.")
+         " Silakan unggah gambar batik untuk mengetahui jenisnya.")
 
 
 # Mengunggah gambar

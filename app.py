@@ -20,7 +20,7 @@ batik_descriptions = {
 }
 
 # Menampilkan judul aplikasi Streamlit
-st.title("Aplikasi untuk Klasifikasi Batik")
+st.title("Aplikasi Klasifikasi Batik")
 
 # Menambahkan deskripsi di bawah judul
 st.write("Aplikasi ini dapat mendeteksi jenis batik berikut: Betawi, Kawung, Megamendung, Parang, dan Sekar Jagad."

@@ -2,6 +2,8 @@ import streamlit as st
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import numpy as np
+import base64
+import os
 from PIL import Image
 
 # Memuat model yang sudah dilatih
@@ -36,7 +38,7 @@ def set_background_image(image_path):
     st.markdown(css_code, unsafe_allow_html=True)
 
 # Panggil fungsi dengan path gambar
-set_background_image("/wp.jpg")
+set_background_image("batikdarma/wp.jpg")
 
 # Menampilkan judul aplikasi Streamlit
 st.title("Aplikasi Klasifikasi Batik")

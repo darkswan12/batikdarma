@@ -36,7 +36,7 @@ def set_background_image(image_path):
     st.markdown(css_code, unsafe_allow_html=True)
 
 # Panggil fungsi dengan path gambar
-set_background_image("\batikdarma\wp.jpg")
+set_background_image("batikdarma/wp.jpg")
 
 # Menampilkan judul aplikasi Streamlit
 st.title("Aplikasi Klasifikasi Batik")

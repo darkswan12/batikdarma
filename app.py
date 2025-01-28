@@ -19,6 +19,25 @@ batik_descriptions = {
     "Batik Sekar Jagad": "Batik Sekar Jagad dikenal dengan pola yang rumit dan indah, menyerupai peta atau pulau-pulau yang terhubung. Nama “Sekar Jagad” berasal dari kata “sekar” (bunga) dan “jagad” (dunia), melambangkan keindahan dan keragaman dunia. Pola ini menggambarkan kesatuan dalam keragaman budaya Nusantara, dengan warna-warna yang harmonis dan komposisi yang detail, menjadikannya simbol keindahan dan persatuan."
 }
 
+def set_background_image(image_path):
+    with open(image_path, "rb") as image_file:
+        encoded_image = base64.b64encode(image_file.read()).decode()
+    
+    css_code = f"""
+    <style>
+    .stApp {{
+        background-image: url(data:image/jpg;base64,{encoded_image});
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }}
+    </style>
+    """
+    st.markdown(css_code, unsafe_allow_html=True)
+
+# Panggil fungsi dengan path gambar
+set_background_image("\batikdarma\wp.jpg")
+
 # Menampilkan judul aplikasi Streamlit
 st.title("Aplikasi Klasifikasi Batik")
 
@@ -53,7 +72,7 @@ if uploaded_file is not None:
     threshold = 50  # misalnya 50%
     if confidence >= threshold:
         st.write(f"Prediksi: **{pred_label}**")
-        st.write(f"Probabilitas Keyakinan: **{confidence:.2f}%**")
+        st.write(f"Persentase: **{confidence:.2f}%**")
 
         # Menampilkan deskripsi batik yang diklasifikasikan
         st.write("Deskripsi Batik:")

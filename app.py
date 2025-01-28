@@ -2,8 +2,6 @@ import streamlit as st
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import numpy as np
-import base64
-import os
 from PIL import Image
 
 # Memuat model yang sudah dilatih

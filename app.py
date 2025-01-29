@@ -17,6 +17,7 @@ def set_background_image(image_path):
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        background:linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3));
     }}
     </style>
     """

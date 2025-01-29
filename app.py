@@ -27,7 +27,7 @@ def set_background_image(image_path):
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.5); /* Lapisan hitam semi-transparan */
-        z-index: -1; /* Tetap di belakang konten */
+        z-index: 1; /* Tetap di belakang konten */
     }}
     </style>
     """

@@ -10,14 +10,24 @@ def set_background_image(image_path):
     with open(image_path, "rb") as image_file:
         encoded_image = base64.b64encode(image_file.read()).decode()
     
-    css_code = f"""
+     css_code = f"""
     <style>
     .stApp {{
+        position: relative;
         background-image: url(data:image/jpg;base64,{encoded_image});
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        background:linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8));
+    }}
+    .stApp::before {{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Lapisan hitam semi-transparan */
+        z-index: -1; /* Tetap di belakang konten */
     }}
     </style>
     """

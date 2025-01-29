@@ -23,7 +23,7 @@ def set_background_image(image_path):
     st.markdown(css_code, unsafe_allow_html=True)
 
 # Panggil fungsi untuk menambahkan background image
-set_background_image("batikdarma/wp.jpg")  # Ganti dengan path ke gambar Anda
+set_background_image("main/wp.jpg")  # Ganti dengan path ke gambar Anda
 
 # Memuat model yang sudah dilatih
 model = load_model('model/BatikDetection.h5', compile=False)

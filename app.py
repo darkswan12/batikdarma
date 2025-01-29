@@ -10,7 +10,7 @@ def set_background_image(image_path):
     with open(image_path, "rb") as image_file:
         encoded_image = base64.b64encode(image_file.read()).decode()
     
-     css_code = f"""
+    css_code = f"""
     <style>
     .stApp {{
         position: relative;
@@ -27,7 +27,7 @@ def set_background_image(image_path):
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.5); /* Lapisan hitam semi-transparan */
-        z-index: 1; /* Tetap di belakang konten */
+        z-index: -1; /* Tetap berada di belakang konten */
     }}
     </style>
     """

@@ -13,21 +13,10 @@ def set_background_image(image_path):
     css_code = f"""
     <style>
     .stApp {{
-        position: relative;
         background-image: url(data:image/jpg;base64,{encoded_image});
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-    }}
-    .stApp::before {{
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* Lapisan hitam semi-transparan */
-        z-index: -1; /* Tetap berada di belakang konten */
     }}
     </style>
     """

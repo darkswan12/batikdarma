@@ -26,7 +26,7 @@ def set_background_image(image_path):
 set_background_image("/mount/src/batikdarma/wp.jpg") # Ganti dengan path ke gambar Anda
 
 # Memuat model yang sudah dilatih
-model = load_model('model/BatikDetection.h5', compile=False)
+model = load_model('/mount/src/batikdarma/model/BatikDetection.h5', compile=False)
 
 # Mendefinisikan label berdasarkan kelas yang digunakan saat pelatihan
 labels = ["Batik Betawi", "Batik Kawung", "Batik Megamendung", "Batik Parang", "Batik Sekar Jagad"]
